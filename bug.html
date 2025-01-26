@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // This script attempts to access a non-existent property of an element that is not yet fully rendered.
+    // It causes an error before the element becomes fully available to the script.
+    document.getElementById("myDiv").nonExistentProperty = "test";
+  </script>
+</body>
+</html>

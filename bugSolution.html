@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Wait for the DOM to be fully loaded before accessing the element
+    document.addEventListener('DOMContentLoaded', function() {
+      if (document.getElementById("myDiv")) {
+          //Check if element exists before accessing it
+        document.getElementById("myDiv").innerHTML = "This element is now accessible.";
+      } else {
+          console.error("Element not found");
+      }
+    });
+  </script>
+</body>
+</html>
